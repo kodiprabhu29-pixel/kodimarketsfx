@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://kodiprabhu29-pixel.github.io/kodimarketsfx/sitemap.xml
+
+# Crawl delay and request rate
+Crawl-delay: 1
+Request-rate: 1/10s
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
