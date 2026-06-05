@@ -116,7 +116,7 @@ body {
 }
 
 .nav-logo-img {
-    width: 45px;
+    width: 50px;
 }
 
 .hero-logo-container {
@@ -179,6 +179,7 @@ body {
     letter-spacing: 2px;
     color: var(--accent-gold);
     animation: fade-in-out 2s ease-in-out infinite;
+    margin-top: 30px;
 }
 
 @keyframes fade-in-out {
@@ -236,7 +237,7 @@ body {
     align-items: center;
 }
 
-.nav-logo {
+.nav-logo-wrapper {
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -247,7 +248,7 @@ body {
 }
 
 .nav-text {
-    display: none;
+    display: inline;
 }
 
 .nav-menu {
@@ -981,8 +982,11 @@ body {
     }
 
     .nav-text {
-        display: inline;
-        font-size: 14px;
+        display: none;
+    }
+
+    .nav-logo-img {
+        width: 40px;
     }
 
     .hero-logo {
@@ -1047,12 +1051,12 @@ body {
 }
 
 @media (max-width: 480px) {
-    .logo {
-        width: 150px;
+    .loading-logo {
+        width: 120px;
     }
 
     .nav-logo-img {
-        width: 35px;
+        width: 30px;
     }
 
     .hero-logo {
