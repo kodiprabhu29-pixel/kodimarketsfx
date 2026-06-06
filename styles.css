@@ -1,6 +1,6 @@
 /* ============================================
    KODI MARKETS FX - Premium Styling
-   Black & Gold Luxury Theme
+   Black & Gold Luxury Theme - OPTIMIZED
    ============================================ */
 
 * {
@@ -127,7 +127,7 @@ body {
 
 /* Logo Container Variants */
 .loading-logo-container {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .loading-logo {
@@ -148,11 +148,12 @@ body {
 }
 
 .nav-logo-container {
-    padding: 5px 10px;
+    padding: 0;
 }
 
 .nav-logo-img {
-    width: 50px;
+    width: 60px;
+    height: auto;
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -163,17 +164,19 @@ body {
 }
 
 .hero-logo-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .hero-logo {
-    width: 280px;
+    width: 300px;
     max-width: 90vw;
+    height: auto;
 }
 
 .about-logo-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .about-logo {
@@ -181,11 +184,11 @@ body {
 }
 
 .footer-logo-container {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .footer-logo {
-    width: 80px;
+    width: 100px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -262,7 +265,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 12px 0;
     background: rgba(10, 10, 10, 0);
     backdrop-filter: blur(10px);
     transition: var(--transition);
@@ -292,11 +295,12 @@ body {
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--accent-gold);
-    gap: 10px;
+    gap: 12px;
 }
 
 .nav-text {
     display: inline;
+    white-space: nowrap;
 }
 
 .nav-menu {
@@ -349,17 +353,20 @@ body {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION - FIXED LAYOUT
    ============================================ */
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 60px;
+    padding-top: 80px;
+    padding-bottom: 0;
+    margin: 0;
+    margin-bottom: 0;
 }
 
 .hero-background {
@@ -413,6 +420,8 @@ body {
     z-index: 2;
     text-align: center;
     animation: fade-in 1s ease-out;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 @keyframes fade-in {
@@ -498,13 +507,14 @@ body {
 }
 
 /* ============================================
-   MARKET OVERVIEW
+   MARKET OVERVIEW - FIXED SPACING
    ============================================ */
 
 .market-overview {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(180deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
     border-top: 1px solid var(--border-gold);
+    margin-top: 0;
 }
 
 .section-title {
@@ -565,6 +575,7 @@ body {
 .market-header h3 {
     font-size: 20px;
     color: var(--accent-gold);
+    margin: 0;
 }
 
 .market-badge {
@@ -610,7 +621,7 @@ body {
    ============================================ */
 
 .trading-insights {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--primary-bg);
 }
 
@@ -707,7 +718,7 @@ body {
    ============================================ */
 
 .about {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
     border-top: 1px solid var(--border-gold);
 }
@@ -768,7 +779,7 @@ body {
    ============================================ */
 
 .performance {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--primary-bg);
 }
 
@@ -854,7 +865,7 @@ body {
    ============================================ */
 
 .contact {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
     border-top: 1px solid var(--border-gold);
 }
@@ -953,7 +964,7 @@ body {
 .footer {
     background: var(--primary-bg);
     border-top: 1px solid var(--border-gold);
-    padding: 40px 0;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -968,7 +979,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .footer-tagline {
@@ -1034,7 +1045,12 @@ body {
     }
 
     .nav-logo-img {
-        width: 40px;
+        width: 50px;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding-top: 70px;
     }
 
     .hero-logo {
@@ -1052,10 +1068,12 @@ body {
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 15px;
     }
 
     .btn {
         width: 100%;
+        padding: 12px 30px;
     }
 
     .about-content {
@@ -1084,22 +1102,31 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .loading-logo {
-        width: 120px;
+    .market-overview {
+        padding: 60px 0;
     }
 
-    .about-logo {
-        width: 180px;
+    .about {
+        padding: 60px 0;
     }
 
-    .footer-logo {
-        width: 60px;
+    .performance {
+        padding: 60px 0;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .footer {
+        padding: 40px 0;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 40px;
+        min-height: 85vh;
+        padding-top: 60px;
     }
 
     .hero-logo {
@@ -1115,20 +1142,21 @@ body {
         font-size: 16px;
     }
 
+    .hero-tagline {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
     .logo {
         width: 180px;
     }
 
-    .loading-logo {
-        width: 100px;
-    }
-
-    .about-logo {
-        width: 150px;
+    .nav-logo-img {
+        width: 45px;
     }
 
     .footer-logo {
-        width: 50px;
+        width: 70px;
     }
 
     .section-title {
@@ -1147,6 +1175,18 @@ body {
     .contact-form input,
     .contact-form textarea {
         padding: 12px;
+    }
+
+    .performance-number {
+        font-size: 36px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 12px;
     }
 }
 
