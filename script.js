@@ -225,7 +225,7 @@ if (contactForm) {
         console.log('Form submitted:', { name, email, message });
 
         // Show success message
-        alert('Thank you for reaching out! We will get back to you soon.');
+        alert('Thank you for reaching out! We will get back to you soon at ' + email);
 
         // Reset form
         contactForm.reset();
@@ -404,7 +404,7 @@ function injectStructuredData() {
         "contact": {
             "@type": "ContactPoint",
             "contactType": "Customer Support",
-            "email": "hello@kodimarketsfx.com"
+            "email": "kodiprabhu29@gmail.com"
         }
     };
 
