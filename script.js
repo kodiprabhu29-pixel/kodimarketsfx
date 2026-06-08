@@ -285,9 +285,33 @@ const validateLogos = () => {
             console.error(`❌ Logo failed to load: ${logo.className}`);
         });
     });
+    
+    // Log summary
+    if (failedLogos.length === 0) {
+        console.log('✅ All logos loaded successfully!');
+        console.log(`Total logos loaded: ${loadedLogos.length}`);
+    } else {
+        console.warn(`⚠️ ${failedLogos.length} logo(s) failed to load`);
+    }
 };
 
 validateLogos();
+
+// ============================================
+// CLEAR CACHE FOR LOGO UPDATES
+// ============================================
+
+// Clear cached logo references on page load
+window.addEventListener('load', () => {
+    // Check for old logo references and force reload
+    const oldLogos = document.querySelectorAll('img[src*="kodi-logo.png"]');
+    oldLogos.forEach(img => {
+        if (img.src.includes('kodi-logo.png') && !img.src.includes('kodi-logo-transparent')) {
+            console.warn('⚠️ Old logo reference detected, updating...');
+            img.src = img.src.replace('kodi-logo.png', 'kodi-logo-transparent.png');
+        }
+    });
+});
 
 // ============================================
 // PERFORMANCE MONITORING
@@ -345,9 +369,24 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
+// EMAIL VALIDATION
+// ============================================
+
+const validateEmails = () => {
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    console.log(`✅ Email contacts found: ${emailLinks.length}`);
+    emailLinks.forEach((link, index) => {
+        console.log(`  ${index + 1}. ${link.href}`);
+    });
+};
+
+validateEmails();
+
+// ============================================
 // INITIALIZATION
 // ============================================
 
 console.log('KODI MARKETS FX - Website Loaded Successfully');
 console.log('Logo Integration: Active');
 console.log('Branding Effects: Enabled');
+console.log('Version: 2.0 - Updated with transparent logo and dual email support');
