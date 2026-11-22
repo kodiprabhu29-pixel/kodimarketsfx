@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
+  <meta name="description" content="KODI MARKETS FX macroeconomic and market fundamentals research terminal.">
+  <title>Macro Intelligence Terminal | KODI MARKETS FX</title>
+  <link rel="icon" type="image/jpeg" href="./Real%20logo.jpeg">
+  <link rel="stylesheet" href="terminal.css">
+  <script src="terminal.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Terminal navigation">
+      <a class="brand" href="./index.html" aria-label="KODI MARKETS FX home">
+        <img src="./transparent%20file.png" alt="KODI MARKETS FX official logo">
+        <span><strong>KODI MARKETS FX</strong><small>MACRO INTELLIGENCE</small></span>
+      </a>
+      <div class="side-label">RESEARCH</div>
+      <nav class="side-nav">
+        <a class="side-link active" href="#overview"><span>▦</span> Overview</a>
+        <a class="side-link" href="#gold"><span>◈</span> XAUUSD fundamentals</a>
+        <a class="side-link" href="#macro"><span>◎</span> Global macro</a>
+        <a class="side-link" href="#events"><span>▤</span> Economic calendar</a>
+        <a class="side-link" href="#india"><span>▥</span> Indian markets</a>
+        <a class="side-link" href="#intelligence"><span>✧</span> AI intelligence</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="connection"><span class="status-dot"></span><span>Data services not connected</span></div>
+        <a href="./index.html" class="back-link">← Back to website</a>
+        <p>Discipline. Strategy. Freedom.</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb">RESEARCH <span>/</span> MACRO TERMINAL</div>
+        <div class="top-actions"><span class="market-state"><i></i> DATA FEED OFFLINE</span><button class="refresh" id="refreshButton" type="button" title="Check data connection">↻ <span>Refresh</span></button></div>
+      </header>
+
+      <section class="page-heading">
+        <div><p class="eyebrow">GLOBAL MACRO &amp; FUNDAMENTALS</p><h1>Market Intelligence</h1><p class="subheading">A disciplined view of the forces shaping global markets.</p></div>
+        <div class="date-box"><span>LOCAL TIME · ASIA/KOLKATA</span><strong id="localClock">--:--:--</strong><small id="localDate">Waiting for browser clock</small></div>
+      </section>
+
+      <div class="notice" role="status"><span class="notice-icon">i</span><p><strong>Research workspace preview.</strong> Live data and AI analysis are not connected yet. No market prices, releases, forecasts, or signals are shown until verified data sources are configured.</p></div>
+
+      <section class="section-block" aria-labelledby="snapshot-title">
+        <div class="section-heading"><div><p class="eyebrow">CROSS-ASSET SNAPSHOT</p><h2 id="snapshot-title">Macro dashboard</h2></div><span class="section-meta">SOURCE STATUS · NOT CONNECTED</span></div>
+        <div class="snapshot-grid">
+          <article class="metric-card"><div class="metric-top"><span>US DOLLAR INDEX</span><b class="metric-icon">$</b></div><strong class="unavailable">—</strong><p>Price and trend unavailable</p><div class="metric-foot"><span class="tag neutral">Awaiting authorized feed</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>US 10Y TREASURY</span><b class="metric-icon">10Y</b></div><strong class="unavailable">—</strong><p>Yield and change unavailable</p><div class="metric-foot"><span class="tag neutral">Awaiting Treasury source</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>FED POLICY RATE</span><b class="metric-icon">◷</b></div><strong class="unavailable">—</strong><p>Latest target range unavailable</p><div class="metric-foot"><span class="tag neutral">Awaiting Fed data</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>US INFLATION</span><b class="metric-icon">%</b></div><strong class="unavailable">—</strong><p>Latest CPI release unavailable</p><div class="metric-foot"><span class="tag neutral">Awaiting BLS source</span></div></article>
+        </div>
+      </section>
+
+      <section class="section-block" id="gold" aria-labelledby="gold-title">
+        <div class="section-heading"><div><p class="eyebrow">PRECIOUS METALS · FUNDAMENTALS</p><h2 id="gold-title">XAUUSD analysis</h2></div><span class="section-meta">BIAS · NOT YET ASSESSED</span></div>
+        <div class="gold-layout">
+          <article class="panel gold-panel"><div class="gold-title-row"><div><span class="symbol-label">GOLD / US DOLLAR</span><h3>XAUUSD</h3></div><span class="tag neutral">No live assessment</span></div><div class="gold-placeholder"><div class="orb">Au</div><div><strong>Fundamental bias pending</strong><p>Connect verified macro and market feeds to evaluate the drivers below. No directional view is implied.</p></div></div><div class="driver-list"><div><span>Dollar conditions</span><b>Awaiting data</b></div><div><span>Nominal &amp; real yields</span><b>Awaiting data</b></div><div><span>Fed expectations</span><b>Awaiting data</b></div><div><span>Inflation &amp; employment</span><b>Awaiting data</b></div><div><span>Safe-haven &amp; official demand</span><b>Awaiting data</b></div></div><p class="panel-footnote">Gold can diverge from DXY; any future assessment will explain cross-asset context and conflicting drivers.</p></article>
+          <article class="panel factor-panel"><div class="panel-heading"><div><span class="eyebrow">DRIVER BALANCE</span><h3>Evidence tracker</h3></div><span class="muted">0 observations</span></div><div class="factor-row"><span class="factor-mark gold-mark">+</span><div><strong>Bullish factors</strong><small>Verified supporting evidence will appear here</small></div><span class="count">—</span></div><div class="factor-row"><span class="factor-mark red-mark">−</span><div><strong>Bearish factors</strong><small>Verified opposing evidence will appear here</small></div><span class="count">—</span></div><div class="factor-row"><span class="factor-mark gray-mark">•</span><div><strong>Neutral / mixed</strong><small>Conflicting or inconclusive evidence</small></div><span class="count">—</span></div><div class="invalidation"><strong>Invalidation conditions</strong><p>Scenario invalidation levels require market data and a defined analysis horizon.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section-block" id="macro" aria-labelledby="macro-title">
+        <div class="section-heading"><div><p class="eyebrow">POLICY · GROWTH · PRICES</p><h2 id="macro-title">Global macro monitors</h2></div><span class="section-meta">VALUES HIDDEN UNTIL SOURCED</span></div>
+        <div class="monitor-grid">
+          <article class="panel monitor"><span class="monitor-icon">◉</span><div><h3>Federal Reserve</h3><p>Policy rate · communications · expectations</p></div><span class="tag neutral">Not connected</span></article>
+          <article class="panel monitor"><span class="monitor-icon">⌁</span><div><h3>Treasury yields</h3><p>Nominal curve · real yields · term premium</p></div><span class="tag neutral">Not connected</span></article>
+          <article class="panel monitor"><span class="monitor-icon">▥</span><div><h3>Inflation &amp; employment</h3><p>CPI · PCE · NFP · JOLTS · unemployment</p></div><span class="tag neutral">Not connected</span></article>
+          <article class="panel monitor"><span class="monitor-icon">◌</span><div><h3>Geopolitical &amp; liquidity</h3><p>Risk context · central-bank demand · liquidity</p></div><span class="tag neutral">Not connected</span></article>
+        </div>
+      </section>
+
+      <section class="section-block" id="events" aria-labelledby="events-title">
+        <div class="section-heading"><div><p class="eyebrow">UPCOMING RELEASES</p><h2 id="events-title">Economic calendar</h2></div><span class="section-meta">ACTUALS AND FORECASTS WILL BE DISTINGUISHED</span></div>
+        <article class="panel table-panel"><div class="table-scroll"><table><thead><tr><th>DATE / TIME</th><th>EVENT</th><th>REGION</th><th>PREVIOUS</th><th>FORECAST</th><th>ACTUAL</th><th>STATUS</th></tr></thead><tbody><tr><td colspan="7" class="empty-state">Calendar feed is not configured. No events or estimates are being displayed.</td></tr></tbody></table></div><div class="table-caption">Event schedule and release values require a configured calendar provider. Times will be displayed in Asia/Kolkata.</div></article>
+      </section>
+
+      <section class="section-block" id="india" aria-labelledby="india-title">
+        <div class="section-heading"><div><p class="eyebrow">INDIA · EQUITIES &amp; FLOWS</p><h2 id="india-title">Indian market monitor</h2></div><span class="section-meta">NSE / RBI DATA NOT CONNECTED</span></div>
+        <div class="india-grid"><article class="panel india-card"><div class="india-name"><span class="index-symbol">N</span><div><h3>NIFTY 50</h3><p>Index overview</p></div></div><strong class="unavailable">—</strong><div class="india-bottom"><span>Price and change unavailable</span><span class="tag neutral">No feed</span></div></article><article class="panel india-card"><div class="india-name"><span class="index-symbol">B</span><div><h3>BANK NIFTY</h3><p>Banking index overview</p></div></div><strong class="unavailable">—</strong><div class="india-bottom"><span>Price and change unavailable</span><span class="tag neutral">No feed</span></div></article><article class="panel india-card flows-card"><div class="panel-heading"><div><span class="eyebrow">INSTITUTIONAL FLOWS</span><h3>FII / DII activity</h3></div></div><div class="flow-empty">Verified exchange data will be shown here once connected.</div><div class="india-bottom"><span>Source: pending</span><span>Updated: —</span></div></article></div>
+      </section>
+
+      <section class="section-block" id="intelligence" aria-labelledby="ai-title">
+        <div class="section-heading"><div><p class="eyebrow">RESEARCH COPILOT</p><h2 id="ai-title">AI market intelligence</h2></div><span class="section-meta">AI SERVICE NOT CONFIGURED</span></div>
+        <article class="panel ai-panel"><div class="ai-symbol">✧</div><div class="ai-copy"><h3>Evidence first. Analysis second.</h3><p>AI explanations will be grounded in collected, timestamped market and economic data. The assistant will distinguish released facts from forecasts and estimates.</p><div class="prompt-chips"><span>Why is gold moving?</span><span>What changed in the latest CPI?</span><span>What are this week's key risks?</span></div></div><button class="ask-button" id="askButton" type="button" disabled>AI coming in a later phase</button></article>
+      </section>
+
+      <footer class="footer"><span>KODI MARKETS FX · Discipline. Strategy. Freedom.</span><span>Educational research only · Not financial advice</span></footer>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
