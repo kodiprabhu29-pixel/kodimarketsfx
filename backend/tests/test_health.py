@@ -4,10 +4,17 @@ from fastapi.testclient import TestClient
 from pydantic import ValidationError
 import pytest
 
+from app.core.config import Settings
 from app.main import app
 from app.models.responses import ApiResponse, DataStatus, Observation
 
 client = TestClient(app)
+
+
+def test_application_initializes_with_health_route() -> None:
+    assert app.title == "KODI MARKETS FX Macro API"
+    assert app.version == "0.1.0"
+    assert any(route.path == "/api/health" for route in app.routes)
 
 
 def test_health_endpoint_returns_health_and_version() -> None:
@@ -33,6 +40,37 @@ def test_health_endpoint_applies_configured_cors_origins() -> None:
     assert response.headers["access-control-allow-origin"] == (
         "https://kodiprabhu29-pixel.github.io"
     )
+
+
+def test_unknown_api_route_returns_not_found_error_response() -> None:
+    response = client.get("/api/not-a-route")
+
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Not Found"}
+
+
+def test_settings_load_prefixed_environment_variables(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("KMF_APP_VERSION", "test-version")
+    monkeypatch.setenv("KMF_CORS_ORIGINS", '["https://frontend.example"]')
+
+    settings = Settings(_env_file=None)
+
+    assert settings.app_version == "test-version"
+    assert settings.cors_origins == ["https://frontend.example"]
+
+
+def test_settings_load_dotenv_file(tmp_path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / ".env").write_text(
+        'KMF_APP_NAME="Test Macro API"\n'
+        'KMF_CORS_ORIGINS=["https://frontend.example"]\n',
+        encoding="utf-8",
+    )
+
+    settings = Settings()
+
+    assert settings.app_name == "Test Macro API"
+    assert settings.cors_origins == ["https://frontend.example"]
 
 
 def test_observation_response_keeps_values_and_status_separate() -> None:
